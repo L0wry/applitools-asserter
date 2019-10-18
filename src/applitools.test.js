@@ -24,7 +24,7 @@ const startServer = () => new Promise((resolve, reject) => {
 
 const nockApplitools = (applitoolsResponse = {}) => {
     const batchId = 'batchId';
-    const apiKey = 'apiKey';
+    const apiKey = 'apiKey';    
 
     const scope = nock('https://eyes.applitools.com')
         .get(`/api/sessions/batches/${batchId}/bypointerid?apikey=${apiKey}`)
@@ -35,6 +35,7 @@ const nockApplitools = (applitoolsResponse = {}) => {
         scope.done()
         return res;
     }).catch(err => {
+        // bit smelly, but the easiest way to log out errors when mocks or server crashes
         console.log(err)
         throw err
     })
