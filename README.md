@@ -8,10 +8,14 @@ This tools aims to make integrations Applitools easier by returning information 
 
 this has been built to run on an Azure function.
 
-All you need to do is hit the deployed api with the following.
+All you need to do is do a get request to the deployed function with the following.
 
-`?batchKey=applitoolsApiKey`
-`?`
+`?batchKey=applitoolsBatchID`
+
+`?ApiKey=applitoolsApiKey`
+
+## Example
+`axios.get(`${BASE_URL}?apiKey=${apiKey}&batchId=${batchId}`)`
 
 ## Installing dependancies
 `yarn`
