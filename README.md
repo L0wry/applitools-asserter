@@ -1,4 +1,4 @@
-# Applitools Asserter
+# Applitools Poller
 
 ## Concept
 
